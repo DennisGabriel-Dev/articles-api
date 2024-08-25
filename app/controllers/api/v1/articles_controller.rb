@@ -1,6 +1,7 @@
 class Api::V1::ArticlesController < ApplicationController
   def index
+    @message = "Articles"
     @articles = Article.all
-    render json: @articles, status: :ok
+    render status: :ok
   end
 end
